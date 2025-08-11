@@ -1,0 +1,76 @@
+
+/* background of website color */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+/* game display block */
+
+#game {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* graph grid of game */
+.board {
+    display: grid;
+    grid-template: repeat(8, 60px) / repeat(8, 60px);
+    border: 4px solid #444;
+    background: #222;
+}
+
+/* square initlization */
+.square {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+/* dark color of square */
+.square.dark {
+    background: #444;
+}
+
+/* light color of square */
+.square.light {
+    background: #fff;
+}
+
+/* piece initialization */
+.piece {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 8px auto;
+    position: relative;
+}
+
+/* red piece color */
+.piece.red {
+    background: #e74c3c;
+    border: 2px solid #c0392b;
+}
+
+/* black piece color */
+.piece.black {
+    background: #111;
+    border: 2px solid #444;
+}
+
+/* king piece after getting to opposite side */
+.piece.king::after {
+    content: "K";
+    color: #ffd700;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-size: 20px;
+}
+
+/* pointer selection color of selected grid box */
+.selected {
+    outline: 3px solid #f39c12;
+}
